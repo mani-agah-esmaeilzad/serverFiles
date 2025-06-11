@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- عنوان صفحه به پارک علم و فناوری تغییر کرد -->
+    <title>چت‌بات پارک علم و فناوری</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- استفاده از فونت وزیرمتن برای خوانایی بهتر در فارسی -->
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-Variable-font-face.css"
+        rel="stylesheet" type="text/css" />
+    <!-- کتابخانه آیکون برای آیکون‌های زیباتر -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body class="dark-mode">
+
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <!-- عنوان برنامه با آیکون پارک علم و فناوری -->
+                <div class="app-brand">
+                    <i class="fas fa-microscope app-logo-icon"></i>
+                    <h1 class="app-title">پارک علم و فناوری</h1>
+                </div>
+                <button class="new-chat-button">
+                    <i class="fas fa-plus"></i>
+                    <span class="text">گفتگوی جدید</span>
+                </button>
+            </div>
+            <div class="chat-list">
+                <!-- آیتم‌های چت به صورت داینامیک اینجا اضافه می‌شوند -->
+                <div class="chat-item active">
+                    <i class="far fa-comments chat-icon-item"></i>
+                    <span class="chat-title">گفتگوی عمومی</span>
+                </div>
+            </div>
+            <div class="sidebar-footer">
+                <button id="theme-switch">
+                    <span class="icon"><i class="fas fa-sun"></i></span>
+                    <span class="text">تغییر پوسته</span>
+                </button>
+                <button id="lang-switch" data-lang="en">
+                    <span class="icon"><i class="fas fa-globe"></i></span>
+                    <span class="text">English</span>
+                </button>
+                <button id="settings-button">
+                    <span class="icon"><i class="fas fa-cog"></i></span>
+                    <span class="text">تنظیمات</span>
+                </button>
+
+                <div class="logo-section">
+                    <!-- لوگوی اول حفظ شده -->
+                    <a href="http://cofecode.com" target="_blank" title="CofeCode">
+                        <img src="https://placehold.co/100x40/764ABC/FFFFFF?text=CofeCode&font=montserrat"
+                            alt="لوگوی CofeCode" class="partner-logo"
+                            onerror="this.src='https://placehold.co/100x40/cccccc/333333?text=CofeCode+Error&font=montserrat';">
+                    </a>
+                    <!-- لوگوی دوم به پارک علم و فناوری تغییر کرد - یک لوگوی نمونه استفاده شده است -->
+                    <a href="#" target="_blank" title="پارک علم و فناوری">
+                        <img src="https://placehold.co/100x40/1E88E5/FFFFFF?text=پارک+علم+و+فناوری&font=vazirmatn"
+                            alt="لوگوی پارک علم و فناوری" class="partner-logo"
+                            onerror="this.src='https://placehold.co/100x40/cccccc/333333?text=STP+Error&font=vazirmatn';">
+                    </a>
+                </div>
+                <p class="app-version">نسخه ۱.۰.۰</p>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <header class="chat-header">
+                <button id="sidebar-toggle-mobile" class="sidebar-toggle-mobile-button">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h2 id="current-chat-title">گفتگوی عمومی</h2>
+                <div class="chat-header-actions">
+                    <button class="action-button" title="جستجو در گفتگو">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="action-button" title="اطلاعات بیشتر">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </button>
+                </div>
+            </header>
+            <div class="chat-area">
+                <!-- پیام‌های نمونه برای نمایش اولیه -->
+                <!-- <div class="message ai-message">
+                    <div class="message-avatar"><i class="fas fa-robot"></i></div>
+                    <div class="message-bubble">
+                        <p>سلام! من چت‌بات پارک علم و فناوری هستم. چطور می‌توانم به شما کمک کنم؟</p>
+                        <span class="message-time">۱۰:۳۰ صبح</span>
+                    </div>
+                </div>
+                <div class="message user-message">
+                    <div class="message-avatar"><i class="fas fa-user"></i></div>
+                    <div class="message-bubble">
+                        <p>سلام، من در مورد شرایط عضویت در پارک سوال داشتم.</p>
+                        <span class="message-time">۱۰:۳۱ صبح</span>
+                    </div>
+                </div>
+                <div class="message ai-message">
+                    <div class="message-avatar"><i class="fas fa-robot"></i></div>
+                    <div class="message-bubble">
+                        <p>حتماً! برای اطلاع از شرایط عضویت می‌توانید به وب‌سایت ما مراجعه کنید یا با شماره تماس پارک در
+                            ارتباط باشید. آیا اطلاعات بیشتری نیاز دارید؟</p>
+                        <span class="message-time">۱۰:۳۲ صبح</span>
+                    </div>
+                </div> -->
+            </div>
+
+            <div class="input-area-wrapper">
+                <div class="input-area">
+                   
+                    <textarea id="chat-input" placeholder="پیام خود را اینجا بنویسید..." rows="1"></textarea>
+                    <button id="send-button" title="ارسال پیام">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
